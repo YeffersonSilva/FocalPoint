@@ -1,4 +1,4 @@
-"use client"; // Esto indica que es un Client Component
+"use client";
 
 import { useState } from 'react';
 import TaskItem from './TaskItem';
@@ -39,28 +39,20 @@ export default function TaskList() {
     }
   };
 
-
-
   const activeTasks = tasks.filter(task => !task.completed);
   const completedTasks = tasks.filter(task => task.completed);
 
   return (
-    <div className={styles.taskListContainer}>
-      <h2 className={styles.heading}>Suas tarefas de hoje</h2>
+    <div className={styles.container}>
       
-      <div className={styles.taskList}>
-        {activeTasks.map(task => (
-          <TaskItem 
-            key={task.id} 
-            task={task} 
-            onToggle={toggleTask}
-            onDelete={deleteTask}
-          />
-        ))}
-        {completedTasks.length > 0 && (
-          <>
-            <h3 className={styles.completedHeading}>Tarefas finalizadas</h3>
-            {completedTasks.map(task => (
+      
+      <div className={styles.taskListContainer}>
+        
+        
+        <div className={styles.tasksWrapper}>
+        <h2 className={styles.heading}>Suas tarefas de hoje</h2>
+          <div className={styles.taskList}>
+            {activeTasks.map(task => (
               <TaskItem 
                 key={task.id} 
                 task={task} 
@@ -68,12 +60,32 @@ export default function TaskList() {
                 onDelete={deleteTask}
               />
             ))}
-          </>
-        )}
+          </div>
+          
+          {completedTasks.length > 0 && (
+            <>
+              <h3 className={styles.completedHeading}>Tarefas finalizadas</h3>
+              <div className={styles.taskList}>
+                {completedTasks.map(task => (
+                  <TaskItem 
+                    key={task.id} 
+                    task={task} 
+                    onToggle={toggleTask}
+                    onDelete={deleteTask}
+                  />
+                ))}
+              </div>
+            </>
+          )}
+        </div>
       </div>
-      <button className={styles.addButton} onClick={() => setIsNewTaskModalOpen(true)}>
-        Adicionar nova tarefa
-      </button>
+      
+      <div className={styles.addButtonContainer}>
+        <button className={styles.addButton} onClick={() => setIsNewTaskModalOpen(true)}>
+          Adicionar nova tarefa
+        </button>
+      </div>
+      
       {isNewTaskModalOpen && (
         <NewTaskModal 
           onClose={() => setIsNewTaskModalOpen(false)} 

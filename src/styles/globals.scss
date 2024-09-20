@@ -2,7 +2,7 @@
   --primary-color: #0099ff;
   --primary-color-dark: #0077cc;
   --primary-color-light: #66c2ff;
-  --background-color: #f4f4f4;
+  --background-color: #ffffff; // Cambia el color de fondo a blanco
   --text-color: #333;
   --border-color: #e0e0e0;
 }
@@ -11,22 +11,18 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: var(--background-color); // Asegúrate de que el fondo sea blanco
   margin: 0;
   padding: 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: white; // Asegúrate de que el fondo del header sea blanco
 }
 
 .logo {
@@ -44,4 +40,22 @@ body {
   font-size: 14px;
   color: #888;
   margin: 0;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; // Alinea la parte superior del contenido
+  min-height: calc(100vh - 70px); // Ajusta según la altura del header
+  background-color: var(--background-color); // Asegúrate de que el fondo sea blanco aquí también
+}
+
+.container {
+  max-width: 600px;
+  width: 90%;
+  background-color: white; // Mantén el fondo blanco en el contenedor
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px; // Añade padding a la container si es necesario
 }

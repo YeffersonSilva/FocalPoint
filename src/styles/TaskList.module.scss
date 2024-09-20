@@ -1,29 +1,28 @@
 .taskListContainer {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin-top: 20px;
 }
 
-.heading {
+.heading, .completedHeading {
   font-size: 18px;
   margin-bottom: 20px;
-  color: var(--text-color);
+  color: #888;
+  text-align: center;
+}
+
+.tasksWrapper {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px; // Mantén el padding si deseas que el contenido tenga espacio
 }
 
 .taskList {
-  background-color: #f9f9f9;
+  background-color: white;
   border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 20px; // Si no hay más elementos, esto se puede eliminar
 }
 
-.completedHeading {
-  font-size: 16px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: #888;
+.addButtonContainer {
+  padding: 0 20px 20px; // Mantén el padding del contenedor del botón
 }
 
 .addButton {

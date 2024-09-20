@@ -17,7 +17,9 @@ export default function TaskItem({ task, onToggle, onDelete }: TaskItemProps) {
         onChange={() => onToggle(task.id)}
         className={styles.checkbox}
       />
-      <span className={task.completed ? styles.completed : ''}>{task.title}</span>
+      <span className={`${styles.taskTitle} ${task.completed ? styles.completed : ''}`}>
+        {task.title}
+      </span>
       <button onClick={() => onDelete(task.id)} className={styles.deleteButton}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.deleteIcon}>
           <polyline points="3 6 5 6 21 6"></polyline>
