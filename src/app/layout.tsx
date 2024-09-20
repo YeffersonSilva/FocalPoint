@@ -6,6 +6,11 @@ export const metadata = {
   description: 'Gerenciador de tarefas',
 };
 
+function formatDate() {
+  const options: Intl.DateTimeFormatOptions = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+  return new Date().toLocaleDateString('pt-BR', options);
+}
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
@@ -14,6 +19,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <header className="header">
             <img src="/logo.svg" alt="FocalPoint" className="logo" />
             <h1 className="welcome">Bem-vindo de volta, Marcus</h1>
+            <p className="date">{formatDate()}</p>
           </header>
           <main>{children}</main>
         </div>
