@@ -9,10 +9,7 @@ import { Task } from '../types';
 
 export default function TaskList() {
   const [tasks, setTasks] = useState<Task[]>([
-    { id: 1, title: 'Lavar as mãos', completed: false },
-    { id: 2, title: 'Fazer um bolo', completed: false },
-    { id: 3, title: 'Lavar a louça', completed: false },
-    { id: 4, title: 'Limpar o banheiro', completed: true },
+
   ]);
   const [isNewTaskModalOpen, setIsNewTaskModalOpen] = useState(false);
   const [taskToDelete, setTaskToDelete] = useState<number | null>(null);
