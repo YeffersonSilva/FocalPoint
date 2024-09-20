@@ -1,14 +1,17 @@
+
 .taskItem {
   display: flex;
   align-items: center;
   padding: 10px;
-  border: 2px solid var(--border-color);
+  border: 2px dotted var(--border-color); // Mudando para borda pontilhada
   border-radius: 4px;
   margin-bottom: 10px;
   transition: all 0.3s ease;
-
+  padding: 15px;
+  margin-bottom: 15px;
   &:hover {
     background-color: #f0f0f0;
+    border-style: solid; // Mudando para borda sólida no hover
   }
 }
 
@@ -20,6 +23,8 @@
   border: 2px solid var(--primary-color);
   border-radius: 4px;
   cursor: pointer;
+  width: 24px;
+  height: 24px;
 
   &:checked {
     background-color: var(--primary-color);
@@ -63,5 +68,21 @@
 
   &:hover {
     color: #ff4d4d;
+  }
+}
+
+.addButton {
+  background: linear-gradient(to bottom, var(--primary-color-dark), var(--primary-color));
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+
+  &:hover {
+    background: linear-gradient(to bottom, var(--primary-color), var(--primary-color-light));
   }
 }
