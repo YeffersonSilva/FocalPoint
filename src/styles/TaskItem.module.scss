@@ -2,10 +2,14 @@
   display: flex;
   align-items: center;
   padding: 10px;
-  border-bottom: 1px solid var(--border-color);
+  border: 2px dotted var(--border-color);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
 
-  &:last-child {
-    border-bottom: none;
+  &:hover {
+    border-style: solid;
+    background-color: #f0f0f0;
   }
 }
 
@@ -56,6 +60,7 @@
   width: 20px;
   height: 20px;
   color: #888;
+  transition: color 0.3s ease;
 
   &:hover {
     color: #ff4d4d;

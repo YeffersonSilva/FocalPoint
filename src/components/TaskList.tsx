@@ -39,10 +39,7 @@ export default function TaskList() {
     }
   };
 
-  const formatDate = () => {
-    const options: Intl.DateTimeFormatOptions = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
-    return new Date().toLocaleDateString('pt-BR', options);
-  };
+
 
   const activeTasks = tasks.filter(task => !task.completed);
   const completedTasks = tasks.filter(task => task.completed);
@@ -50,7 +47,7 @@ export default function TaskList() {
   return (
     <div className={styles.taskListContainer}>
       <h2 className={styles.heading}>Suas tarefas de hoje</h2>
-      <p className={styles.date}>{formatDate()}</p>
+      
       <div className={styles.taskList}>
         {activeTasks.map(task => (
           <TaskItem 
