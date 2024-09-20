@@ -1,0 +1,47 @@
+:root {
+  --primary-color: #0099ff;
+  --primary-color-dark: #0077cc;
+  --primary-color-light: #66c2ff;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --border-color: #e0e0e0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  height: 30px;
+}
+
+.welcome {
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.date {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
