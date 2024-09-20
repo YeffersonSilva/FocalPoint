@@ -16,7 +16,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="pt-BR">
       <body>
         <header className="header">
-          <img src="/logo.svg" alt="FocalPoint" className="logo" />
+          
+          <p className='logoletra'> <img src="logo.svg" alt="FocalPoint" className="logo" /> FocalPoint</p>
           <h1 className="welcome">Bem-vindo de volta, Marcus</h1>
           <p className="date">{formatDate()}</p>
         </header>

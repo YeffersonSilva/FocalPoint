@@ -23,7 +23,7 @@ body {
   padding: 20px;
   border-bottom: 1px solid var(--border-color);
   background-color: white;
-  margin: 0 40px; // Aumentando a margem lateral do header
+  margin: 0 40px;
 }
 
 .logo {
@@ -47,8 +47,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 70px);
   background-color: var(--background-color);
   padding: 20px;
-  margin: 0 40px; // Adicionando margem lateral ao conteúdo principal
+  margin: 0 40px;
+}
+.logoletra{
+  font-size: 19px;
+  margin-left: 10px;
+  font-weight: bold; /* O también puedes usar 700 */
+
+
+}
+
+@media (max-width: 768px) {
+  @import 'header';
+  @import 'task-list';
+  @import 'modal';
+  @import 'delete-modal';
+  @import 'main';
 }

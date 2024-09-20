@@ -1,51 +1,55 @@
 .modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 90%;
+  max-width: 300px;
+}
+
+.modalTitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.deleteButton {
+  background: linear-gradient(to right, #cc0000, #ff9999);
+  color: white;
+  border: none;
+
+  &:hover {
+    background: linear-gradient(to right, #ff0000, #ffcccc);
   }
-  
-  .modal {
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    width: 90%;
-    max-width: 400px;
-  }
-  
-  .modalTitle {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-  }
-  
-  .button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .cancelButton {
-    @extend .button;
-    background-color: #f4f4f4;
-    color: var(--text-color);
-    margin-right: 10px;
-  }
-  
-  .deleteButton {
-    @extend .button;
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-  }
+}
+
+.cancelButton {
+  background-color: #f4f4f4;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}

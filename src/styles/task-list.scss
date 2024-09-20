@@ -1,0 +1,44 @@
+.taskListContainer {
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .heading,
+  .completedHeading {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #888;
+    text-align: center;
+  }
+  
+  .tasksWrapper {
+    border: none;
+    padding: 0;
+  }
+  
+  .taskList {
+    background-color: white;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .taskItem {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+  
+  .checkbox {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .taskTitle {
+    font-size: 13px;
+  }
